@@ -11,6 +11,14 @@ public class TouchInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                this.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y));
+            }
+        }
     }
 }

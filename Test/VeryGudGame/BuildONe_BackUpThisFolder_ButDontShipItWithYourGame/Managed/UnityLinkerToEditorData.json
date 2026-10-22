@@ -1006,6 +1006,14 @@
         "name": "Physics2D",
         "dependencies": [
           {
+            "name": "BoxCollider2D",
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Collider2D",
             "scenes": [],
             "dependencyType": 1,

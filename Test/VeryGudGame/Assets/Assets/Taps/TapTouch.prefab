@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4714535988069007689}
   - component: {fileID: 86820806357937672}
   - component: {fileID: 8062599197965031381}
-  - component: {fileID: -8733442722660202358}
+  - component: {fileID: -216361842176997984}
   m_Layer: 0
   m_Name: TapTouch
   m_TagString: Untagged
@@ -265,7 +265,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-8733442722660202358
+--- !u!114 &-216361842176997984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -277,3 +277,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84211c1f44e171744a8f243a0c9f3e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  tapPouring: {fileID: 8062599197965031381}
+  PourSound: {fileID: 8300000, guid: 1b8ef7fff91a1a84c98bcd0f2d18ed0d, type: 3}

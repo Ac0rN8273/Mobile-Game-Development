@@ -17,6 +17,7 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TouchU5BU5D_t32B2235E604E83356406C886C1A817C01F7C6354;
 struct TouchscreenU5BU5D_t73D22E3D2A7039C6C374D75B796C8F83BCA897E3;
 struct Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07;
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20;
 struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299;
 struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
@@ -36,10 +37,13 @@ struct Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700;
 struct Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE;
 struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E;
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E;
+struct PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072;
 struct SkinChangedDelegate_tA6D456E853D58AD2EF8A599F543C7E5BA8E94B98;
 
 IL2CPP_EXTERN_C RuntimeClass* Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var;
@@ -51,6 +55,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD
 IL2CPP_EXTERN_C String_t* _stringLiteral05A6B1935A11CC00576B654F79D68AA97F760F6A;
 IL2CPP_EXTERN_C String_t* _stringLiteral45988B3258AF4A504CC9CAF94FBB01D35A4DAB0C;
 IL2CPP_EXTERN_C String_t* _stringLiteral766265526777D5656D13DF2BA1A60E99BF777364;
+IL2CPP_EXTERN_C String_t* _stringLiteral8F4C0232B74391F75DE093FFFA9D05818EC9A7D8;
 IL2CPP_EXTERN_C String_t* _stringLiteral95B70EA0EBEA74FB776F022984B7AB5D2D304AF7;
 IL2CPP_EXTERN_C String_t* _stringLiteral9BD013AD9C9ACCB1BCABD801B0685CBB4B5F85AE;
 IL2CPP_EXTERN_C String_t* _stringLiteralBE52C654EF2CAF90C7CDCD99D70C3061D70A88E1;
@@ -364,6 +369,9 @@ struct Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70_marshaled_com
 	Finger_t0E27A005E4B818F9D0078D69AF2B22649DDD4C6A* ___m_Finger;
 	Record_t4205712C85C6F00A9F1DC4D23E20F595FCB4F6A4 ___m_TouchRecord;
 };
+struct AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
 struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
 {
 };
@@ -469,6 +477,11 @@ struct FingerAndTouchState_tC0A8EFA38A7428736E11195294EA7F6E1BA8F82D_marshaled_c
 	int32_t ___haveActiveTouchesNeedingRefreshNextUpdate;
 	InputStateHistory_1_tFE6497AA1E7DC5B54CA3C00976576A7E88C77798* ___activeTouchState;
 };
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20  : public AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A
+{
+	PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E* ___m_PCMReaderCallback;
+	PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072* ___m_PCMSetPositionCallback;
+};
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
 {
 };
@@ -547,6 +560,7 @@ struct DeviceInfoOverlay_tF7E4905F84FEC1C673F2E705109FD7EF6BC8B6F9  : public Mon
 struct NewMonoBehaviourScript_tDF2B2369E2C0C5A026765C81A66D2F2DC5C64290  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___tapPouring;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___PourSound;
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
@@ -712,6 +726,7 @@ inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* Component_GetCompo
 {
 	return ((  AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnhancedTouchSupport_Enable_mD8F0AC9B4B4DDBCA5EA779F35A5C28394D3FF6CE (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlyArray_1_t3D5F71F2FAC15E8E7413E1B4BDCCA92D49962E72 Touch_get_activeTouches_m10CB2BE5EC26DB9CF742196282FCF10C090AAD11 (const RuntimeMethod* method) ;
 inline Enumerator_t1401BB8858A2A2ED1A0698D23EB25FD52FAC9B34 ReadOnlyArray_1_GetEnumerator_m337048790A2E77A5E4DFDF36992EB8BCFFD6133F (ReadOnlyArray_1_t3D5F71F2FAC15E8E7413E1B4BDCCA92D49962E72* __this, const RuntimeMethod* method)
 {
@@ -726,7 +741,8 @@ inline Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70 Enumerator_get_Current_m9
 	return ((  Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70 (*) (Enumerator_t1401BB8858A2A2ED1A0698D23EB25FD52FAC9B34*, const RuntimeMethod*))Enumerator_get_Current_m9A45E8C925C87EA4F8D9A4454F48055A04249688_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Touch_get_isTap_m48E7409F15259BE6D04C66ADDA71F6037E4AD4B3 (Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 inline bool Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D (Enumerator_t1401BB8858A2A2ED1A0698D23EB25FD52FAC9B34* __this, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Enumerator_t1401BB8858A2A2ED1A0698D23EB25FD52FAC9B34*, const RuntimeMethod*))Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D_gshared)(__this, method);
@@ -747,7 +763,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 69972
+// Method Definition Index: 69975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay_Update_m010D748591CCC74E3317D27D83DA29BFCA68963D (DeviceInfoOverlay_tF7E4905F84FEC1C673F2E705109FD7EF6BC8B6F9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -761,7 +777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay_Update_m010D748591CCC7
 		return;
 	}
 }
-// Method Definition Index: 69973
+// Method Definition Index: 69976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay_OnGUI_m48C31416FD52C836FE9F1F80BE5F758217BACC73 (DeviceInfoOverlay_tF7E4905F84FEC1C673F2E705109FD7EF6BC8B6F9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -954,7 +970,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 69974
+// Method Definition Index: 69977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay_Awake_mF5858F21D1C3CCDA281BE6308C61381FEFF08881 (DeviceInfoOverlay_tF7E4905F84FEC1C673F2E705109FD7EF6BC8B6F9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -971,7 +987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay_Awake_mF5858F21D1C3CCD
 		return;
 	}
 }
-// Method Definition Index: 69975
+// Method Definition Index: 69978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay__ctor_mD0945F1EFFE3B316C5E2DB8BA4EF6C2865323C25 (DeviceInfoOverlay_tF7E4905F84FEC1C673F2E705109FD7EF6BC8B6F9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -989,7 +1005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceInfoOverlay__ctor_mD0945F1EFFE3B31
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 69976
+// Method Definition Index: 69979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_Awake_m21BBEDAC9C1E8DD2E2EFEC6193D95BA17E372AA6 (NewMonoBehaviourScript_tDF2B2369E2C0C5A026765C81A66D2F2DC5C64290* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -999,34 +1015,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_Awake_m21BBEDAC9C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:13>
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:15>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0;
 		L_0 = Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B(__this, Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
 		__this->___tapPouring = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tapPouring), (void*)L_0);
-		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:14>
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 69977
+// Method Definition Index: 69980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_Start_m3AEB44E196F409294FDF6484B549ABB295AD0AFC (NewMonoBehaviourScript_tDF2B2369E2C0C5A026765C81A66D2F2DC5C64290* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:19>
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 69978
+// Method Definition Index: 69981
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_OnEnable_mDA74C5846D103BC2982BFE01E1E3B8AB206E4718 (NewMonoBehaviourScript_tDF2B2369E2C0C5A026765C81A66D2F2DC5C64290* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:25>
+		EnhancedTouchSupport_Enable_mD8F0AC9B4B4DDBCA5EA779F35A5C28394D3FF6CE(NULL);
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:26>
+		return;
+	}
+}
+// Method Definition Index: 69982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_Update_mA54E945ACEFE3BC597B6BD6C8AC9882B124A0563 (NewMonoBehaviourScript_tDF2B2369E2C0C5A026765C81A66D2F2DC5C64290* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5AEE7816CF0CCC6427AFBADCEA8D6A8AD7FED67C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m9A45E8C925C87EA4F8D9A4454F48055A04249688_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ReadOnlyArray_1_GetEnumerator_m337048790A2E77A5E4DFDF36992EB8BCFFD6133F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8F4C0232B74391F75DE093FFFA9D05818EC9A7D8);
 		s_Il2CppMethodInitialized = true;
 	}
 	Enumerator_t1401BB8858A2A2ED1A0698D23EB25FD52FAC9B34 V_0;
@@ -1036,7 +1064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_Update_mA54E945AC
 	Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:24>
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:31>
 		il2cpp_codegen_runtime_class_init_inline(Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70_il2cpp_TypeInfo_var);
 		ReadOnlyArray_1_t3D5F71F2FAC15E8E7413E1B4BDCCA92D49962E72 L_0;
 		L_0 = Touch_get_activeTouches_m10CB2BE5EC26DB9CF742196282FCF10C090AAD11(NULL);
@@ -1049,7 +1077,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript_Update_mA54E945AC
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0037:
+FINALLY_0049:
 			{
 				Enumerator_Dispose_m5AEE7816CF0CCC6427AFBADCEA8D6A8AD7FED67C((&V_0), Enumerator_Dispose_m5AEE7816CF0CCC6427AFBADCEA8D6A8AD7FED67C_RuntimeMethod_var);
 				return;
@@ -1058,43 +1086,51 @@ FINALLY_0037:
 		try
 		{
 			{
-				goto IL_002c_1;
+				goto IL_003e_1;
 			}
 
 IL_0010_1:
 			{
-				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:24>
+				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:31>
 				Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70 L_2;
 				L_2 = Enumerator_get_Current_m9A45E8C925C87EA4F8D9A4454F48055A04249688((&V_0), Enumerator_get_Current_m9A45E8C925C87EA4F8D9A4454F48055A04249688_RuntimeMethod_var);
 				V_2 = L_2;
-				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:26>
+				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:33>
 				il2cpp_codegen_runtime_class_init_inline(Touch_t07A55E11962F143607E917F0B6FEFB36EE2DDA70_il2cpp_TypeInfo_var);
 				bool L_3;
 				L_3 = Touch_get_isTap_m48E7409F15259BE6D04C66ADDA71F6037E4AD4B3((&V_2), NULL);
 				if (!L_3)
 				{
-					goto IL_002c_1;
+					goto IL_0047_1;
 				}
 			}
 			{
-				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:28>
+				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:35>
 				AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___tapPouring;
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_5 = __this->___PourSound;
 				NullCheck(L_4);
-				AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_4, NULL);
+				AudioSource_PlayOneShot_m098BCAE084AABB128BB19ED805D2D985E7B75112(L_4, L_5, NULL);
+				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:37>
+				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral8F4C0232B74391F75DE093FFFA9D05818EC9A7D8, NULL);
+				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:39>
+				goto IL_0057;
 			}
 
-IL_002c_1:
+IL_003e_1:
 			{
-				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:24>
-				bool L_5;
-				L_5 = Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D((&V_0), Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D_RuntimeMethod_var);
-				if (L_5)
+				//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:31>
+				bool L_6;
+				L_6 = Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D((&V_0), Enumerator_MoveNext_m82F3D32E3AA31DB80C5890560488F0A74E47196D_RuntimeMethod_var);
+				if (L_6)
 				{
 					goto IL_0010_1;
 				}
 			}
+
+IL_0047_1:
 			{
-				goto IL_0045;
+				goto IL_0057;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -1103,13 +1139,13 @@ IL_002c_1:
 		}
 	}
 
-IL_0045:
+IL_0057:
 	{
-		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:32>
+		//<source_info:C:/Users/S25111653/Documents/GitHub/Mobile-Game-Development/Test/VeryGudGame/Assets/Scripts/TouchInputForTaps.cs:42>
 		return;
 	}
 }
-// Method Definition Index: 69979
+// Method Definition Index: 69983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript__ctor_mC52B54CFF4703513FE2F0CFA60A5A6AD27ED5635 (NewMonoBehaviourScript_tDF2B2369E2C0C5A026765C81A66D2F2DC5C64290* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>
@@ -1126,7 +1162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NewMonoBehaviourScript__ctor_mC52B54CFF4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 69980
+// Method Definition Index: 69984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1161,7 +1197,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 69981
+// Method Definition Index: 69985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	//<source_info:<no-source>:1>

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch; //To avoid errors
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
@@ -19,11 +21,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        foreach (Touch taptouch in Touch.activeTouches)
+        {
+            if (taptouch.isTap) //If the dectected touch is a tap
+            {
+                tapPouring.Play();
+            }
+        }
         
     }
 
-    private void OnMouseDown()
-    {
-        tapPouring.Play();
-    }
+
 }

@@ -530,6 +530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 86820806357937672, guid: 9fd0972881d38d948922c568b07a9519, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3168478475655703664, guid: 9fd0972881d38d948922c568b07a9519, type: 3}
       propertyPath: m_Name
       value: TapTouch

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch; //To avoid errors
@@ -6,7 +7,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    AudioSource tapPouring;
+    public AudioSource tapPouring;
+    public AudioClip PourSound;
 
     private void Awake()
     {
@@ -18,6 +20,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
     }
 
+    protected void OnEnable()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -25,8 +32,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             if (taptouch.isTap) //If the dectected touch is a tap
             {
-                tapPouring.Play();
+                tapPouring.PlayOneShot(PourSound);
+
+                Debug.Log("Imma Touch the Tap");
             }
+            break;
         }
         
     }

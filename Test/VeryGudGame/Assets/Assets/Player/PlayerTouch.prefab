@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1446596f958d142adf5fd946da8bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TouchInput
-  PlayerTouchArea: {fileID: 2543237927074114724}
+  PlayerTouchArea: {fileID: 5431586234373245483, guid: 4cdebf291e8aedb4a92ad646b8145aeb, type: 3}
 --- !u!61 &-2869621012020600883
 BoxCollider2D:
   m_ObjectHideFlags: 0

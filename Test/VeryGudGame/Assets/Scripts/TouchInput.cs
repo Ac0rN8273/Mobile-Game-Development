@@ -29,18 +29,11 @@ public class TouchInput : MonoBehaviour
                 Vector3 TouchPos = Camera.main.ScreenToWorldPoint(touch.screenPosition);
                 TouchPos.z = 0; //Appear on Screen
                 Debug.Log("Imma Touch");
-                StartCoroutine(SpawnTouch());
-                //Instantiate(PlayerTouchArea, TouchPos, Quaternion.identity);
+                Instantiate(PlayerTouchArea, TouchPos, Quaternion.identity);
+
             }
             break;
         }
 
-    }
-
-    IEnumerator SpawnTouch()
-    {
-        Instantiate(PlayerTouchArea, TouchPos, Quaternion.identity);
-        yield return new WaitForSeconds(2.5f);
-        Destroy(this.gameObject);
     }
 }

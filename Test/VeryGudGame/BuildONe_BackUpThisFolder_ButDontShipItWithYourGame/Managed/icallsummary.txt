@@ -356,6 +356,7 @@ UnityEngine.Camera::get_orthographicSize_Injected
 UnityEngine.Camera::ResetWorldToCameraMatrix_Injected
 UnityEngine.Camera::ScreenPointToRay_Injected
 UnityEngine.Camera::ScreenToViewportPoint_Injected
+UnityEngine.Camera::ScreenToWorldPoint_Injected
 UnityEngine.Camera::SetStereoProjectionMatrix_Injected
 UnityEngine.Camera::SetStereoViewMatrix_Injected
 UnityEngine.Camera::SetupCurrent_Injected
@@ -571,6 +572,7 @@ UnityEngine.Font::Internal_CreateFont_Injected
 UnityEngine.FrameTimingManager::GetLatestTimings_Injected
 UnityEngine.FrameTimingManager::CaptureFrameTimings
 UnityEngine.GameObject::GetComponentsInternal_Injected
+UnityEngine.GameObject::CompareTag_Internal_Injected
 UnityEngine.GameObject::get_activeInHierarchy_Injected
 UnityEngine.GameObject::get_activeSelf_Injected
 UnityEngine.GameObject::get_layer_Injected
@@ -997,6 +999,7 @@ UnityEngine.Object::FindObjectFromInstanceID_Injected
 UnityEngine.Object::ForceLoadFromInstanceID_Injected
 UnityEngine.Object::Internal_CloneSingleWithParent_Injected
 UnityEngine.Object::Internal_CloneSingle_Injected
+UnityEngine.Object::Internal_InstantiateSingle_Injected
 UnityEngine.Object::DestroyImmediate_Injected
 UnityEngine.Object::Destroy_Injected
 UnityEngine.Object::DontDestroyOnLoad_Injected

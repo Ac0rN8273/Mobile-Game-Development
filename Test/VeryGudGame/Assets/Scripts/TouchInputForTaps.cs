@@ -1,9 +1,8 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch; //To avoid errors
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class TouchInputForTaps : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -17,7 +16,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     protected void OnEnable()
@@ -28,18 +27,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Touch taptouch in Touch.activeTouches)
-        {
-            if (taptouch.isTap) //If the dectected touch is a tap
-            {
-                tapPouring.PlayOneShot(PourSound);
 
-                Debug.Log("Imma Touch the Tap");
-            }
-            break;
-        }
-        
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            tapPouring.PlayOneShot(PourSound);
+            Debug.Log("Touches Tap");
+        }
 
+    }
 }
+

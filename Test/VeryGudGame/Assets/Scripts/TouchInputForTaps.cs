@@ -36,7 +36,7 @@ public class TouchInputForTaps : MonoBehaviour
         {
             tapPouring.PlayOneShot(PourSound);
             Debug.Log("Touches Tap");
-            Handheld.Viberate();
+            Handheld.Vibrate();
         }
 
     }
